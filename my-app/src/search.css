@@ -1,0 +1,23 @@
+.search {
+  position: fixed;
+  top: 120px;
+  left: 120px;
+  /*display: flex; */
+}
+
+.form-control {
+  width: 350px;
+}
+#location {
+  top: 175px;
+  position: fixed;
+  left: 210px;
+}
+
+#current-location {
+  border-radius: 4px;
+  color: rgb(0 132 255);
+  font-weight: bold;
+  border-color: whitesmoke;
+  background-color: aliceblue;
+}

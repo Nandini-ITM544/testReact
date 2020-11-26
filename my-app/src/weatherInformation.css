@@ -1,0 +1,15 @@
+.information {
+  width: 20rem;
+
+  top: 5px;
+  -webkit-box-shadow: 5px 5px 5px 0px #d32121, inset 4px 4px 15px 0px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 5px 5px 5px 0px #ee0f0f, inset 4px 4px 15px 0px hsl(183, 56%, 34%),
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  font-family: "Slabo 27px", serif;
+
+  color: rgb(0 132 255);
+  font-size: 18px;
+}

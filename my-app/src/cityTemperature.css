@@ -1,0 +1,17 @@
+.city {
+  margin: 0 auto;
+  display: block;
+  font-weight: bold;
+  position: relative;
+  padding-top: 90px;
+  text-align: center;
+  padding-right: 100px;
+}
+.cityorzip {
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px #ff9f1c;
+}
+#mainTemperature {
+  color: rgb(0 132 255);
+}
