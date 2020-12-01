@@ -6,7 +6,7 @@ export default function Footer() {
       <p>
         <a href='https://github.com/Nandini-ITM544/testReact' target='_blank'>
           Open source code
-        </a>
+        </a>{" "}
         by Nandini
       </p>
     </footer>
