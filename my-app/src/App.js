@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 
-import "./styles.css";
+import "./App.css";
 import Search from "./search";
 import CityTemperature from "./cityTemperature";
 import WeatherInformation from "./weatherInformation";
