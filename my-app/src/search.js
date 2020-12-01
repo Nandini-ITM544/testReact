@@ -6,7 +6,7 @@ export default function Search() {
     <div className='search'>
       <form className='mb-3' id='search-city'>
         <div className='row'>
-          <div className='col-6'>
+          <div className='col-9'>
             <input
               type='search'
               className='form-control'
@@ -15,6 +15,10 @@ export default function Search() {
               autofocus='on'
               autocomplete='on'
             />
+          </div>
+
+          <div className='col-3'>
+            <input type='submit' value='Search' className='btn btn-primary' />
           </div>
         </div>
       </form>
