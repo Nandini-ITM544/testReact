@@ -3,6 +3,7 @@ import axios from "axios";
 import "./cityTemperature.css";
 import "./weatherInformation.css";
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 
 export default function Search(props) {
   const [weatherData, setweatherData] = useState({ ready: false });
@@ -15,6 +16,7 @@ export default function Search(props) {
       humidity: Math.round(response.data.list[0].main.humidity),
       wind: Math.round(response.data.list[0].wind.speed),
       realfeel: Math.round(response.data.list[0].main.feels_like),
+      date: new Date(response.data.list[0].dt * 1000),
       city: response.data.city.name,
       high_temp: Math.round(response.data.list[0].main.temp_max),
       low_temp: Math.round(response.data.list[0].main.temp_min),
@@ -103,7 +105,9 @@ export default function Search(props) {
           <div className='col-sm-6'>
             <div className='card information'>
               <div className='card-body'>
-                <p className='card-text' id='currenttime'></p>
+                <p className='card-text' id='currenttime'>
+                  <FormattedDate defaultdate={weatherData.date} />
+                </p>
 
                 <p className='card-text'>
                   Highest for the day:{" "}
