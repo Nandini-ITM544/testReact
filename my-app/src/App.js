@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 
 import "./App.css";
 import Search from "./search";
-import CityTemperature from "./cityTemperature";
+
 import WeatherInformation from "./weatherInformation";
 import Forecast from "./forecast";
 import Footer from "./footer";
@@ -12,7 +12,7 @@ function WeatherApp() {
     <div className='container'>
       <h1>Welcome to Nandini's weather channel 👋🏻</h1>
       <Search />
-      <CityTemperature />
+
       <WeatherInformation />
       <div className='forecast-element'>
         <Forecast />
