@@ -39,7 +39,7 @@ export default function Search(props) {
       high_temp: Math.round(response.data.main.temp_max),
       low_temp: Math.round(response.data.main.temp_min),
       description: response.data.weather[0].description,
-      // icon:,
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
     //  setTemperature(Math.round(response.data.list[0].main.temp));
     //  setCity(response.data.city.name);
