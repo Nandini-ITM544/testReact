@@ -13,7 +13,7 @@ export default function Forecast(props) {
     setloaded(true);
   }
 
-  if (loaded) {
+  if (loaded && props.city === forcast.city.name) {
     return (
       <div className='forecast-element'>
         <div className='card-group'>
