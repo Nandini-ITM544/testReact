@@ -12,15 +12,6 @@ function WeatherApp() {
       <h1>Welcome to Nandini's weather channel 👋🏻</h1>
       <Search defaultcity='Paris' />
 
-      <div className='forecast-element'>
-        <Forecast />
-        <Forecast />
-        <Forecast />
-        <Forecast />
-        <Forecast />
-        <Forecast />
-        <Forecast />
-      </div>
       <Footer />
     </div>
   );

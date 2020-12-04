@@ -3,6 +3,7 @@ import axios from "axios";
 import "./cityTemperature.css";
 import "./weatherInformation.css";
 import WeatherInformation from "./weatherInformation";
+import Forecast from "./forecast";
 import React, { useState } from "react";
 
 export default function Search(props) {
@@ -88,6 +89,8 @@ export default function Search(props) {
           </div>
         </div>
         <WeatherInformation data={weatherData} />
+
+        <Forecast city={weatherData.city} />
       </div>
     );
   } else {
