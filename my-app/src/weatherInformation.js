@@ -2,6 +2,7 @@ import React from "react";
 import "./weatherInformation.css";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInformation(props) {
   return (
@@ -11,29 +12,7 @@ export default function WeatherInformation(props) {
         <h2 id='mainTemperature'>
           <WeatherIcon code={props.data.icon} alt={props.data.description} />
 
-          <span id='temp'>{props.data.temperature}</span>
-          <span className='symbol'>°C</span>
-
-          <div className='btn-group btn-group-toggle' data-toggle='buttons'>
-            <label className='btn btn-secondary active' id='celsius'>
-              <input
-                type='radio'
-                name='options'
-                id='option1'
-                autocomplete='off'
-              />
-              C
-            </label>
-            <label className='btn btn-secondary' id='farenheit'>
-              <input
-                type='radio'
-                name='options'
-                id='option2'
-                autocomplete='off'
-              />
-              F
-            </label>
-          </div>
+          <WeatherTemperature temp={props.data.temperature} />
         </h2>
       </div>
       <div className='row'>
