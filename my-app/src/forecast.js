@@ -18,7 +18,7 @@ export default function Forecast(props) {
     return (
       <div className='forecast-element'>
         <div className='card-group'>
-          {forcast.list.slice(0, 5).map(function (forcastitem) {
+          {forcast.list.slice(0, 6).map(function (forcastitem) {
             return <ForeCastElment data={forcastitem} />;
           })}
           ;
