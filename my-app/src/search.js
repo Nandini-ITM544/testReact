@@ -8,7 +8,7 @@ import React, { useState } from "react";
 
 export default function Search(props) {
   function search() {
-    let apiKey = "fb1865d0d87f6d1b02d912ac727945ca";
+    let apiKey = "524548cb6cd5477e5eb95ca4824b75f3";
     //let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=${apiKey}`;
 
     let units = "metric";
@@ -25,7 +25,7 @@ export default function Search(props) {
     navigator.geolocation.getCurrentPosition(getPosition);
   }
   function getPosition(position) {
-    let apiKey = "fb1865d0d87f6d1b02d912ac727945ca";
+    let apiKey = "524548cb6cd5477e5eb95ca4824b75f3";
     let units = "metric";
     let apiUrl = "https://api.openweathermap.org/data/2.5/weather?";
     let lat = position.coords.latitude;
@@ -113,8 +113,6 @@ export default function Search(props) {
           </div>
         </div>
         <WeatherInformation data={weatherData} />
-
-        <Forecast city={weatherData.city} />
       </div>
     );
   } else {

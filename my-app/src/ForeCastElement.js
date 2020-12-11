@@ -3,14 +3,21 @@ import WeatherIcon from "./WeatherIcon";
 import "./forecast.css";
 
 export default function ForeCastElement(props) {
+  console.log(props.units);
   function hours() {
     let date = new Date(props.data.dt * 1000);
     let hour = date.getHours();
     return `${hour}:00`;
   }
+
   function temperature() {
-    let temperature = Math.round(props.data.main.temp);
-    return `${temperature}°C`;
+    if (props.units === "metric") {
+      let temperature = Math.round(props.data.main.temp);
+      return `${temperature}°C`;
+    } else {
+      let temperature = Math.round((props.data.main.temp * 9) / 5 + 32);
+      return `${temperature}°F`;
+    }
   }
   return (
     <div className='card'>

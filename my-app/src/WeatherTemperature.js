@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import "./weatherInformation.css";
+import Forecast from "./forecast";
+import "./forecast.css";
 
 export default function WeatherTemperature(props) {
   const [unit, setUnit] = useState("celsius");
@@ -81,6 +83,7 @@ export default function WeatherTemperature(props) {
             </div>
           </div>
         </div>
+        <Forecast city={props.temp.city} units='metric' />
       </div>
     );
   } else {
@@ -149,6 +152,7 @@ export default function WeatherTemperature(props) {
             </div>
           </div>
         </div>
+        <Forecast city={props.temp.city} units='Imperial' />
       </div>
     );
   }
