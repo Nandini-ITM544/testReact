@@ -23,6 +23,7 @@ export default function WeatherTemperature(props) {
     return (
       <div>
         <div>
+          <WeatherIcon code={props.temp.icon} alt={props.temp.description} />
           <span id='temp'>{props.temp.temperature}</span>
           <span className='symbol'>°C</span>
 
@@ -95,6 +96,7 @@ export default function WeatherTemperature(props) {
     return (
       <div>
         <div>
+          <WeatherIcon code={props.temp.icon} alt={props.temp.description} />
           <span id='temp'>{fahrenheit}</span>
           <span className='symbol'>°F</span>
           <div className='btn-group btn-group-toggle' data-toggle='buttons'>
