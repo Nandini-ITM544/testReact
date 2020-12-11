@@ -10,8 +10,9 @@
 }
 #location {
   top: 175px;
-  position: fixed;
-  left: 210px;
+
+  margin-left: 22px;
+  margin-top: 20px;
 }
 
 #current-location {

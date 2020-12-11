@@ -21,6 +21,23 @@ export default function Search(props) {
     search();
   }
 
+  function getCurrentLocation(event) {
+    navigator.geolocation.getCurrentPosition(getPosition);
+  }
+  function getPosition(position) {
+    let apiKey = "fb1865d0d87f6d1b02d912ac727945ca";
+    let units = "metric";
+    let apiUrl = "https://api.openweathermap.org/data/2.5/weather?";
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+
+    axios
+      .get(`${apiUrl}lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`)
+      .then(handleResponse);
+
+    return "Loading......";
+  }
+
   const [weatherData, setweatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultcity);
   function handleInputChange(event) {
@@ -42,11 +59,13 @@ export default function Search(props) {
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
     });
+
     //  setTemperature(Math.round(response.data.list[0].main.temp));
     //  setCity(response.data.city.name);
     //setReady(true);
     // setTemperature(response.data.main.temp);
   }
+
   // let apiKey = "fb1865d0d87f6d1b02d912ac727945ca";
   // //let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=${apiKey}`;
   // let currentCity = "New York";
@@ -84,7 +103,11 @@ export default function Search(props) {
           </form>
 
           <div id='location'>
-            <button type='button' id='current-location'>
+            <button
+              type='button'
+              id='current-location'
+              onClick={getCurrentLocation}
+            >
               Current Location
             </button>
           </div>
