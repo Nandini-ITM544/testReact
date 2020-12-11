@@ -18,6 +18,7 @@ export default function WeatherTemperature(props) {
       <div>
         <span id='temp'>{props.temp}</span>
         <span className='symbol'>°C</span>
+
         <div className='btn-group btn-group-toggle' data-toggle='buttons'>
           <label className='btn btn-secondary active' id='celsius'>
             <input

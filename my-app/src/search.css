@@ -1,12 +1,12 @@
 .search {
-  position: fixed;
-  top: 120px;
-  left: 120px;
+  /* position: fixed; */
+  margin-top: 80px;
+  margin-left: -150px;
   /*display: flex; */
 }
 
 .form-control {
-  width: 350px;
+  width: 30%;
 }
 #location {
   top: 175px;
@@ -20,4 +20,9 @@
   font-weight: bold;
   border-color: whitesmoke;
   background-color: aliceblue;
+}
+
+.col-9 {
+  float: left;
+  display: flex;
 }

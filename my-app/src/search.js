@@ -64,20 +64,21 @@ export default function Search(props) {
                 <input
                   type='search'
                   className='form-control'
+                  style={{ width: "200px" }}
                   id='cityname'
                   placeholder='Enter a city'
                   onChange={handleInputChange}
                   // autofocus='on'
                   // autocomplete='on'
                 />
-              </div>
 
-              <div className='col-3'>
-                <input
-                  type='submit'
-                  value='Search'
-                  className='btn btn-primary'
-                />
+                <div className='col-3'>
+                  <input
+                    type='submit'
+                    value='Search'
+                    className='btn btn-primary'
+                  />
+                </div>
               </div>
             </div>
           </form>
