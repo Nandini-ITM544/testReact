@@ -3,7 +3,7 @@ import axios from "axios";
 import "./cityTemperature.css";
 import "./weatherInformation.css";
 import WeatherInformation from "./weatherInformation";
-import Forecast from "./forecast";
+
 import React, { useState } from "react";
 
 export default function Search(props) {
@@ -59,19 +59,7 @@ export default function Search(props) {
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
     });
-
-    //  setTemperature(Math.round(response.data.list[0].main.temp));
-    //  setCity(response.data.city.name);
-    //setReady(true);
-    // setTemperature(response.data.main.temp);
   }
-
-  // let apiKey = "fb1865d0d87f6d1b02d912ac727945ca";
-  // //let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=${apiKey}`;
-  // let currentCity = "New York";
-  // let units = "metric";
-  // let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${currentCity}&appid=${apiKey}&units=${units}`;
-  // axios.get(apiUrl).then(handleResponse);
 
   if (weatherData.ready) {
     return (
@@ -87,8 +75,6 @@ export default function Search(props) {
                   id='cityname'
                   placeholder='Enter a city'
                   onChange={handleInputChange}
-                  // autofocus='on'
-                  // autocomplete='on'
                 />
 
                 <div className='col-3'>

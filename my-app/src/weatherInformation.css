@@ -13,3 +13,6 @@
   color: rgb(0 132 255);
   font-size: 18px;
 }
+canvas {
+  padding-top: 5px;
+}

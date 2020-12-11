@@ -29,7 +29,7 @@ export default function Forecast(props) {
   } else {
     let apiKey = "524548cb6cd5477e5eb95ca4824b75f3";
     let units = "metric";
-    console.log(units);
+
     // if(props.unit ="metric")
     let apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=${units}`;
     axios.get(apiURL).then(displayForecast);

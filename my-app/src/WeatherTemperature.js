@@ -68,7 +68,7 @@ export default function WeatherTemperature(props) {
               </div>
             </div>
           </div>
-          <div className='col-sm-6'>
+          <div className='col-sm-6 second-card'>
             <div className='card ex information'>
               <div className='card-body'>
                 <p className='card-text'>
